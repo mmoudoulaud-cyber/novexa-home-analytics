@@ -1,110 +1,138 @@
-## Section 1 : Project Overview
+# Project Charter
 
-Novexa Home has initiated a Business Intelligence project to better understand the factors affecting its overall profitability.
+**Project:** NOVEXA Home Analytics
 
-The project aims to provide decision-makers with a comprehensive view of commercial, operational and supply chain performance through reliable data analysis and performance monitoring.
+**Author:** Merryl Moudoulaud
 
-The expected outcome is to support strategic decision-making and identify opportunities to improve profitability while sustaining business growth.
+**Version:** 2.0
 
+**Date:** July 2026
 
-## Section 2 : Business Problem
+---
 
-Over the past two years, Novexa Home has seen a gradual increase in turnover, whilst its overall profitability has, however, declined.
+# 1. Project Overview
 
-The management committee does not currently have sufficient insight to determine the main factors behind the erosion of margins.
+NOVEXA Home has launched a Business Intelligence initiative to better understand the factors affecting business profitability.
 
-The company therefore needs an in-depth analysis of its sales performance, stock levels and supply chain in order to identify the factors affecting profitability and prioritise corrective measures.
+Although revenue and order volume continue to grow, overall profitability has steadily declined. Management requires a reliable analytical solution to identify the key business drivers behind this trend and support better decision-making.
 
-## Section 3 : Project Objectives
+The project consists of designing an end-to-end Data Analytics solution combining Python, SQL and Power BI to transform raw sales data into actionable business insights.
+
+---
+
+# 2. Business Problem
+
+Over the past two years, NOVEXA Home has experienced sustained commercial growth while profitability has gradually decreased.
+
+Management currently lacks a consolidated view of business performance, making it difficult to identify:
+
+- the impact of discounts on profitability;
+- differences in performance between product categories;
+- variations in store performance;
+- the evolution of sales across channels.
+
+The project addresses these challenges through an interactive Business Intelligence dashboard.
+
+---
+
+# 3. Project Objectives
 
 The project aims to:
 
-- Analyze commercial, operational and supply chain performance to provide a comprehensive understanding of business performance.
-- Identify the key operational and commercial drivers contributing to declining profitability.
-- Provide decision-makers with a centralized and reliable performance monitoring solution to support strategic decision-making.
-- Standardize business KPIs across the organization to ensure consistent performance measurement.
+- Monitor overall business performance.
+- Analyse revenue, orders and profitability.
+- Identify the main drivers affecting margin.
+- Compare product, store and sales channel performance.
+- Support data-driven business decisions through interactive dashboards.
 
-## Section 4. Project Scope
+---
 
-### In Scope
+# 4. Project Scope
 
-The project includes the analysis of:
+## In Scope
 
+The project includes:
+
+- Revenue analysis
+- Profitability analysis
 - Sales performance
-- Profitability
-- Inventory management
-- Supply chain performance
-- Logistics performance
-- Supplier performance
+- Product performance
 - Store performance
-- Executive business KPIs
+- Sales channel analysis
+- Executive KPIs
+- Interactive Power BI reporting
 
-### Out of Scope
+## Out of Scope
 
 The project does not include:
 
 - Sales forecasting
-- Demand forecasting
-- Machine Learning models
+- Machine Learning
+- Predictive analytics
 - Marketing campaign analysis
+- CRM analysis
 - ERP implementation
-- CRM redesign
-- IT infrastructure projects
-- Operational process redesign
+- Real-time reporting
 
-## Section 5. Key Stakeholders
+---
 
-| Stakeholder | Role in the Project |
-|--------------|--------------------|
-| Chief Executive Officer (CEO) | Executive Sponsor and final decision-maker |
-| Chief Financial Officer (CFO) | Monitors profitability and financial performance |
-| Supply Chain Director | Optimizes inventory and logistics performance |
-| Sales Director | Monitors commercial performance across stores |
-| Procurement Director | Evaluates supplier performance and purchasing efficiency |
-| Data & Analytics Team | Designs, develops and maintains the BI solution |
+# 5. Key Stakeholders
 
-## Section 6. Success Criteria
+| Stakeholder | Responsibility |
+|--------------|----------------|
+| Executive Committee | Defines business objectives and reviews project outcomes |
+| Sales Director | Monitors commercial performance |
+| Finance Director | Monitors profitability and financial KPIs |
+| Store Managers | Analyse local store performance |
+| Data Analyst | Designs the data model, develops dashboards and delivers business insights |
+
+---
+
+# 6. Success Criteria
 
 The project will be considered successful if:
 
-- Decision-makers have access to a centralized and reliable performance dashboard.
-- Business KPIs are standardized and consistently measured.
-- The main drivers of declining profitability are clearly identified.
-- The dashboard supports strategic decision-making through actionable insights.
+- Business users can easily monitor company performance.
+- KPIs are consistent across all dashboard pages.
+- Profitability drivers are clearly identified.
+- Dashboards provide actionable insights.
+- The solution supports informed business decisions.
 
-## Section 7. Project Deliverables
+---
 
-The project will deliver:
+# 7. Project Deliverables
+
+The project delivers:
 
 - Company Profile
 - Project Charter
 - Business Requirements Document
+- Star Schema
 - Data Dictionary
-- Data Model (Star Schema)
-- Clean and validated analytical dataset
+- Synthetic analytical dataset
+- Python data generation pipeline
+- SQLite database
 - SQL analytical queries
-- Python ETL pipeline
-- Executive Power BI Dashboard
-- Executive Report with business recommendations
+- Interactive Power BI dashboard
+- GitHub portfolio repository
 
-## Section 8. Assumptions & Constraints
+---
 
-### Assumptions
+# 8. Assumptions & Constraints
+
+## Assumptions
 
 The project assumes that:
 
-- Historical business data is available and accessible.
-- Data quality is sufficient to perform meaningful analyses.
-- Business departments will collaborate throughout the project.
-- Business KPIs can be standardized across the organization.
-- Key stakeholders will validate business requirements and project deliverables.
+- Historical sales data is available.
+- Business KPIs can be calculated consistently.
+- The analytical dataset accurately represents typical retail business scenarios.
 
-### Constraints
+## Constraints
 
 The project is subject to the following constraints:
 
-- Data is collected from multiple heterogeneous sources.
-- Some datasets may contain missing or inconsistent information.
-- No real-time data will be available for this project.
-- Marketing and CRM data are excluded from the project scope.
-- The project focuses on descriptive and diagnostic analytics only.
+- The dataset is synthetic and created for educational purposes.
+- Data covers a limited business scope.
+- The project focuses on descriptive and diagnostic analytics.
+- No real-time or predictive analytics are included.

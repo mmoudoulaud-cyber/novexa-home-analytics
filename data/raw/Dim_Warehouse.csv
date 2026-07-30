@@ -1,0 +1,6 @@
+Warehouse_ID,Warehouse_Name,City,Capacity,Employees,Storage_Cost_m2,Is_Active
+1,Warehouse 1,Marseille,41486,36,15.34,True
+2,Warehouse 2,Bordeaux,19684,120,17.53,True
+3,Warehouse 3,Lille,22503,17,14.17,True
+4,Warehouse 4,Bordeaux,55252,41,13.75,True
+5,Warehouse 5,Bordeaux,58223,108,8.87,True

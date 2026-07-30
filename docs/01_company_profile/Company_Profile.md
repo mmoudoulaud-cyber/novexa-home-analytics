@@ -1,16 +1,16 @@
-# Company Profile
+x# Company Profile
 
 ---
 
 # 1. Company Overview
 
-**Novexa Home** is a fictional French home improvement and home living retailer created for this Business Intelligence case study.
+**NOVEXA Home** is a fictional French home furnishing and interior decoration retailer created for this end-to-end Data Analytics portfolio project.
 
-Founded in **2004** and headquartered in **Lyon**, the company operates through a nationwide omnichannel network combining physical stores, an e-commerce platform and Click & Collect services.
+Founded in **2004** and headquartered in **Lyon**, the company operates through an omnichannel retail network combining physical stores, an e-commerce platform and Click & Collect services.
 
-Today, Novexa Home is one of the leading retailers in its market, offering more than **31,000 products** covering every room of the home.
+Facing declining profitability despite continuous sales growth, NOVEXA Home has launched a Business Intelligence initiative to better understand its business performance and support data-driven decision-making.
 
-The company has launched a Business Intelligence initiative to improve operational performance and support data-driven decision-making.
+> **Note:** The dataset used in this project is a simplified analytical model designed to simulate realistic business scenarios.
 
 ---
 
@@ -18,49 +18,45 @@ The company has launched a Business Intelligence initiative to improve operation
 
 | Attribute | Value |
 |------------|-------|
-| Industry | Home Improvement & Home Living |
+| Industry | Home Furnishing & Interior Decoration |
 | Headquarters | Lyon, France |
 | Founded | 2004 |
 | Business Model | Omnichannel Retail |
 | Stores | 126 |
-| Distribution Centers | 5 |
-| Employees | 8,700 |
-| Active Customers | 2.3 Million |
-| Product Catalog | 31,500 SKUs |
-| Suppliers | 420 |
-| Annual Revenue | €1.24 Billion |
+| Warehouses | 5 |
+| Product Categories | 10 |
+| Sales Channels | In-store & Online |
 
 ---
 
 # 3. Mission
 
-Our mission is to make home improvement simple, accessible and inspiring by offering high-quality products, competitive prices and a seamless omnichannel shopping experience.
+Deliver quality home furnishing products through an efficient omnichannel retail network while continuously improving customer experience and business performance.
 
 ---
 
 # 4. Vision
 
-Novexa Home aims to become the leading home improvement retailer in France by leveraging operational excellence, innovation and data-driven decision-making.
+Support sustainable business growth by improving operational efficiency and profitability through data-driven decision-making.
 
 ---
 
 # 5. Business Model
 
-Novexa Home operates through an omnichannel retail model combining:
+NOVEXA Home sells furniture and home decoration products through:
 
 - 126 physical stores across France
 - An e-commerce platform
 - Click & Collect services
 - Home delivery
-- Loyalty program
 
-The company purchases products from more than 420 suppliers and distributes them through five national distribution centers.
+Products are supplied by a network of partners and distributed through five national warehouses.
 
 ---
 
 # 6. Product Portfolio
 
-Novexa Home offers more than 31,500 products organized into several categories:
+The product catalogue is organised into ten major categories:
 
 - Living Room
 - Bedroom
@@ -77,13 +73,12 @@ Novexa Home offers more than 31,500 products organized into several categories:
 
 # 7. Organization
 
-The company is organized into the following departments:
+The company operates through several business departments:
 
 - Sales
 - Marketing
 - Procurement
 - Supply Chain
-- Logistics
 - Finance
 - Customer Service
 - IT
@@ -91,17 +86,24 @@ The company is organized into the following departments:
 
 ---
 
-# 8. Current Challenges
+# 8. Current Business Challenges
 
-Although sales have continuously increased over the last two years, profitability has declined.
+Although revenue and order volume continue to grow, overall profitability has steadily declined.
 
-The Executive Committee has identified several operational concerns:
+The Executive Committee has identified several key business concerns:
 
-- Increasing logistics costs
-- Higher inventory carrying costs
-- Frequent stock shortages
-- Uneven store performance
-- Margin erosion across several product categories
+- Profitability is decreasing despite increasing sales.
+- Discount levels continue to rise across sales channels.
+- Profitability varies significantly between product categories.
+- Store performance differs across locations.
+- Management needs better visibility into business performance to support strategic decision-making.
 
-To address these challenges, Novexa Home has launched a Business Intelligence initiative aimed at improving decision-making through data analysis and performance monitoring.
+To address these challenges, NOVEXA Home launched the **NOVEXA Home Analytics** project, combining Python, SQL and Power BI to analyse business performance and provide actionable insights.
 
+---
+
+# 9. Why NOVEXA Home?
+
+NOVEXA Home was created as a fictional company to simulate realistic retail business scenarios and demonstrate practical Data Analytics skills through a complete end-to-end analytics project.
+
+The objective is not to replicate a real company, but to build a professional portfolio project covering data generation, data modelling, SQL analysis, dashboard development and business storytelling.

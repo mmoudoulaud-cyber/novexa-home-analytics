@@ -108,3 +108,45 @@ The Product dimension intentionally includes:
 - Inconsistent capitalization
 - Extra spaces in product names
 
+## Dimension: Dim_Store
+
+### Purpose
+
+Stores descriptive information about Novexa Home retail stores.
+
+This dimension supports geographical, regional and operational performance analysis.
+
+### Columns
+
+| Column | Data Type | Description |
+|---------|-----------|-------------|
+| Store_ID | Integer | Unique store identifier |
+| Store_Name | Text | Store name |
+| Store_Format | Text | City Center / Retail Park / Shopping Mall |
+| City | Text | City |
+| Region | Text | French administrative region |
+| Opening_Date | Date | Store opening date |
+| Surface_Area | Integer | Sales area (m²) |
+| Employees | Integer | Number of employees |
+| Annual_Target | Decimal | Annual revenue target |
+| Warehouse_ID | Integer | Assigned distribution center |
+| Is_Flagship | Boolean | Flagship store indicator |
+
+### Business Rules
+
+- 126 stores are distributed across France.
+- Flagship stores are located in major metropolitan areas.
+- Large stores generate higher revenue.
+- Smaller stores often achieve higher margins.
+- Some stores consistently underperform.
+- Every store is assigned to one warehouse.
+
+### Controlled Data Quality Issues
+
+The Store dimension intentionally includes:
+
+- Missing surface area values
+- Inconsistent city capitalization
+- Duplicate store names (very limited)
+- Missing opening dates
+

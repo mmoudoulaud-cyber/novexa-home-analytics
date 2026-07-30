@@ -1,8 +1,8 @@
 # Business Requirements Document
 
-**Project:** Novexa Home Analytics
+**Project:** NOVEXA Home Analytics
 
-**Version:** 1.0
+**Version:** 2.0
 
 **Author:** Merryl Moudoulaud
 
@@ -12,113 +12,150 @@
 
 # 1. Business Context
 
-Novexa Home has experienced sustained sales growth over the past two years. However, despite this positive commercial performance, overall profitability has steadily declined.
+NOVEXA Home has experienced continuous revenue and order growth over recent years. However, despite this positive commercial performance, overall profitability has steadily declined.
 
-Executive management requires greater visibility into operational performance to understand the factors affecting margins and to support better strategic decisions across sales, inventory, procurement and logistics.
+Executive management needs greater visibility into business performance to better understand the factors driving this trend and support data-driven decision-making.
 
+The objective of this project is to provide an interactive Business Intelligence solution capable of analysing sales performance, profitability and business drivers through a Power BI dashboard.
 
-# 2. Business Questions
+---
 
-The Business Intelligence solution must answer the following strategic questions.
+# 2. Problem Statement
+
+Although the company continues to grow, management has identified a gradual decline in overall profitability.
+
+Several hypotheses have been raised:
+
+- Increasing discount levels
+- Changing sales channel mix
+- Differences in profitability between product categories
+- Uneven store performance
+
+The Business Intelligence solution aims to validate these hypotheses using data.
+
+---
+
+# 3. Project Objectives
+
+The project aims to:
+
+- Monitor overall business performance
+- Analyse revenue and profitability trends
+- Understand the impact of discounts on margin
+- Compare sales channels
+- Identify the most profitable product categories
+- Compare store performance
+- Provide actionable business recommendations
+
+---
+
+# 4. Business Questions
+
+The dashboard should answer the following business questions.
 
 ## Executive Management
 
-- Why is profitability declining while revenue continues to grow?
-- What are the main business drivers affecting profitability?
-- How has profitability evolved over the past two years?
+- Why is profitability declining despite revenue growth?
+- How have revenue and margin evolved over time?
+- Which business drivers have the greatest impact on profitability?
 
 ## Sales
 
-- Which stores perform above or below expectations?
+- Which sales channels generate the highest revenue?
+- How do discounts affect profitability?
+- How has the average basket evolved?
+
+## Products
+
 - Which product categories generate the highest revenue?
-- Which products generate the highest and lowest margins?
-- Which product categories contribute the most to profitability?
+- Which categories have the highest and lowest margin rates?
+- Which products contribute most to profitability?
 
-## Supply Chain
+## Stores
 
-- Which warehouses experience the highest stock-out rates?
-- Which warehouses have the lowest inventory turnover?
-- Which logistics operations generate the highest costs?
+- Which cities generate the highest revenue?
+- Which stores perform above or below average?
+- How does profitability vary across store formats?
 
-## Procurement
+---
 
-- Which suppliers deliver the best overall performance?
-- Which suppliers negatively impact profitability?
-- Which suppliers have the longest delivery lead times?
+# 5. Business KPIs
 
-## Finance
-
-- Which operational costs have the greatest impact on profitability?
-- How has gross margin evolved month by month?
-- Which product categories contribute most to margin erosion?
-
-# 3. Business KPIs
-
-The dashboard must provide the following key performance indicators (KPIs):
+The dashboard includes the following KPIs.
 
 | KPI | Business Purpose |
 |------|------------------|
-| Revenue | Measure commercial performance |
-| Gross Margin (%) | Measure profitability |
-| Gross Profit | Measure financial performance |
-| Sales per Store | Compare store performance |
-| Inventory Turnover | Measure inventory efficiency |
-| Stock-out Rate | Monitor product availability |
-| Supplier On-Time Delivery | Evaluate supplier performance |
-| Delivery Lead Time | Measure logistics efficiency |
-| Average Basket Value | Measure customer purchasing behavior |
-| Discount Rate | Monitor commercial policy impact |
+| Revenue | Monitor commercial performance |
+| Orders | Measure sales activity |
+| Margin % | Measure profitability |
+| Margin Amount | Measure financial performance |
+| Average Basket | Analyse customer purchasing behaviour |
+| Discount Rate | Measure pricing strategy |
+| Revenue by Channel | Compare sales channels |
+| Revenue by Category | Compare product performance |
 
-# 4. Analytical Requirements
+---
 
-The Business Intelligence solution must allow users to:
+# 6. Functional Requirements
 
-- Filter data by year, month and date
-- Filter by store
-- Filter by product category
-- Filter by supplier
-- Compare periods
-- Analyze Top 10 and Bottom 10 performers
-- Drill down from category to product
-- Export summarized data when required
+The Power BI report must allow users to:
 
-# 5. Data Requirements
+- Filter by Year
+- Filter by Product Category
+- Filter by Sales Channel
+- Filter by Store
+- Analyse Year-over-Year performance
+- Explore product and store performance
+- Navigate across dashboard pages
 
-The analytical solution requires the following business entities:
+---
 
-- Sales Transactions
-- Products
-- Product Categories
-- Stores
-- Customers
-- Suppliers
-- Warehouses
-- Calendar
+# 7. Data Model
 
-# 6. Dashboard Requirements
+The analytical solution is based on a Star Schema including:
 
-The reporting solution must provide three executive dashboards:
+- Fact_Sales
+- Dim_Date
+- Dim_Product
+- Dim_Customer
+- Dim_Store
+- Dim_Supplier
+- Dim_Warehouse
 
-## Executive Dashboard
+---
 
-Provides an overall view of company performance.
+# 8. Dashboard Structure
 
-## Sales Dashboard
+The reporting solution consists of five pages.
 
-Provides detailed sales analysis by store, category and product.
+## Executive Sales Dashboard
 
-## Supply Chain Dashboard
+High-level KPIs and business performance overview.
 
-Provides visibility into inventory, logistics and supplier performance.
+## Sales Performance
 
-# 7. Acceptance Criteria
+Analysis of sales channels, customer behaviour and discounts.
 
-The solution will be considered successful if:
+## Product Performance
 
-- Business stakeholders can answer all identified business questions.
-- KPIs are calculated consistently across all dashboards.
-- Data is reliable and validated.
-- Dashboards provide actionable insights.
-- Performance allows smooth navigation and filtering.
+Analysis of product categories, revenue and profitability.
 
+## Store Performance
 
+Comparison of store and city performance.
+
+## Profitability Insights
+
+Summary of key findings and business recommendations.
+
+---
+
+# 9. Success Criteria
+
+The project will be considered successful if:
+
+- The dashboard answers the identified business questions.
+- KPIs remain consistent across all report pages.
+- Business users can easily identify profitability drivers.
+- The report supports data-driven decision-making.
+- Insights are clearly communicated through effective visualisations.

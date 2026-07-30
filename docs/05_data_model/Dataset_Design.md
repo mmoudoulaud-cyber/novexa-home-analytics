@@ -120,4 +120,33 @@ The dataset intentionally contains realistic data quality problems.
 - Mixed date formats
 - Product names with extra spaces
 
+## 7. Relationships
+
+The data model follows a classic Kimball Star Schema.
+
+Fact_Sales is linked to:
+
+- Dim_Date
+- Dim_Product
+- Dim_Store
+- Dim_Customer
+- Dim_Supplier
+- Dim_Warehouse
+
+Each fact record represents one product sold during a single transaction.
+
+## 8. Generation Rules
+
+The dataset will be generated programmatically using Python.
+
+Generation rules include:
+
+- Controlled randomization
+- Reproducible results using fixed random seeds
+- Business-driven probability distributions
+- Seasonal sales behavior
+- Supplier-specific delivery performance
+- Controlled data quality anomalies
+- Realistic pricing and margin calculations
+
 
