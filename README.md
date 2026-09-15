@@ -1,187 +1,77 @@
-# NOVEXA Home Analytics 
-# An end-to-end Data Analytics portfolio project built with Python, SQL and Power BI.
+# NOVEXA Home Analytics
 
-<p align="center">
-    <img src="assets/branding/novexa-logo.png" width="250">
-</p>
+A personal project on sales and profitability for a fictional home furnishing retailer.
 
-<img src="assets/images/executive-dashboard.png" width="90%">
+I built this project to apply my Data Analytics skills to a business problem close to my previous experience in sales and purchasing. The dataset is synthetic.
 
-## Project Overview
+## Business problem
 
-NOVEXA Home Analytics is an end-to-end Data Analytics portfolio project simulating a national home furnishing retailer.
+NOVEXA Home sells furniture and home decoration through stores, an online shop and Click & Collect.
 
-The objective of this project is to investigate why profitability declined despite continuous revenue growth by combining Python, SQL and Power BI.
+Revenue and order volume are growing. At the same time, profitability is getting worse. The objective of the analysis is to understand why the margin rate is falling, and why margin in euros goes down even though sales keep growing.
 
-This project demonstrates the complete workflow of a Data Analytics project, from data generation to business reporting:
+## Dataset & approach
 
-- Data generation with Python
-- Data modelling using a Star Schema
-- SQL validation
-- Data visualization with Power BI
-- Business insights and recommendations
+The data is synthetic. It was created to simulate a realistic retail performance scenario.
 
-Python → CSV → SQLite → Power BI → Business Insights
+It covers January 2024 to June 2026. 2026 only includes the first half of the year, so yearly comparisons use January–June in each year.
 
----
+The model is a simple star schema: one sales fact table (750,000 rows) and six dimensions (date, product, customer, store, supplier, warehouse).
 
-# Business Context
+I defined a small set of KPIs (revenue, orders, margin €, margin rate, discount), calculated them in SQL, then built a Power BI report to explore the results.
 
-NOVEXA is a fictional home furnishing company operating stores across the country as well as an online sales channel.
+## What I found
 
-Although revenue and order volume continue to increase, management has noticed that overall profitability is gradually declining.
+January–June figures:
 
-The objective is to identify the business drivers behind this trend and provide actionable recommendations based on data.
+| Year | Revenue | Orders | Margin rate | Margin € |
+|------|---------|--------|-------------|----------|
+| 2024 | €55.22M | 130,615 | 40.05% | €22.11M |
+| 2025 | €65.93M | 142,047 | 35.40% | €23.34M |
+| 2026 | €80.28M | 155,740 | 28.49% | €22.87M |
 
----
+In 2026, revenue is higher than in 2025, but margin in euros is lower.
 
-# Project Objectives
+**Costs are rising faster than selling prices.** Between 2024 and 2026 (January–June), the average unit cost to unit price ratio moved from 0.58 to 0.68. That puts significant pressure on margin.
 
-This project answers several business questions:
+**Living Room brings a lot of revenue, but at a low margin rate.** In January–June 2026 it is the largest category by revenue (about €40.8M) with a margin rate of about 24%.
 
-- How has revenue evolved over time?
-- Why is profitability decreasing despite revenue growth?
-- Which product categories contribute the most to profit?
-- How do discounts impact overall margin?
-- How do sales channels influence profitability?
-- Which stores perform best?
+**Discounts are increasing.** The average discount rate went from 2.88% in 2024 to 4.10% in 2025 and 5.62% in 2026 (January–June).
 
----
+Online sales are also a larger share of revenue (about 23% in 2024 to 34% in 2026). In 2026 the online margin rate is a bit lower than in store (about 27% vs 29%), and discounts are higher online. This plays a role, but it does not explain the full drop in margin rate on its own.
 
-# Dashboard Overview
+## Power BI dashboard
 
-The Power BI report is organised into five pages.
+The Power BI report has five pages: an executive view, sales, products, stores, and a short summary.
 
-## Executive Sales Dashboard
-
-Overall business performance with the main KPIs, revenue evolution and profitability trends.
+The executive page shows the gap between revenue growth and margin. The product page shows how categories differ on revenue and profitability.
 
 <img src="assets/images/executive-dashboard.png" width="90%">
-
-
----
-
-## Sales Performance
-
-Analysis of revenue by sales channel, customer behaviour, average basket and discount strategy.
-
-<img src="assets/images/sales-performance.png" width="90%">
-
-
----
-
-## Product Performance
-
-Analysis of product categories, margin contribution and profitability by product.
 
 <img src="assets/images/product-performance.png" width="90%">
 
----
+The file is in `powerbi/Novexa_Analytics_v001.pbix`.
 
-## Store Performance
+## Recommendations
 
-Comparison of store performance across cities and store formats.
+- Track purchase cost against selling price more closely, especially where cost has grown faster than price.
+- Start with Living Room: it is the biggest category and the least profitable on rate.
+- Review how often discounts are used, in particular where they are already highest.
 
-<img src="assets/images/store-performance.png" width="90%">
+## Technical details
 
----
+Python/Pandas → SQLite/SQL → Power BI.
 
-## Profitability Insights
-
-Summary of the main findings and business recommendations.
-
-<img src="assets/images/profitability-insights.png" width="90%">
-
----
-
-# Data Model
-
-The Power BI data model follows a Star Schema with one fact table and six dimension tables.
-
-**Fact Table**
-
-- Fact_Sales
-
-**Dimensions**
-
-- Dim_Date
-- Dim_Product
-- Dim_Customer
-- Dim_Store
-- Dim_Supplier
-- Dim_Warehouse
-
-<img src="assets/images/star-schema.png" width="90%">
-
-
----
-
-# Tech Stack
-
-| Tool | Purpose |
-|-------|----------|
-| Python | Dataset generation |
-| Pandas | Data generation & manipulation |
-| SQLite | Database |
-| SQL | Data validation |
-| Power BI | Dashboard & DAX |
-| Git & GitHub | Version control |
-
----
-
-# Repository Structure
-
-```
-novexa-home-analytics
-│
-├── assets/
-├── data/
-├── database/
-├── docs/
-├── powerbi/
-├── sql/
-├── novexa_home_analytics/
-├── tests/
-├── README.md
-└── requirements.txt
-```
-
----
-
-# How to Run
+CSV files are generated with Python, loaded into SQLite, checked with SQL queries, then used in the Power BI report.
 
 ```bash
 python3 -m venv .venv
-
 source .venv/bin/activate
-
 pip install -r requirements.txt
-
 python generate_dataset.py
-
 python create_database.py
-
-pytest
 ```
 
----
+## Limitations
 
-# Key Business Insights
-
-The analysis highlights several important findings:
-
-- Revenue and order volume increased throughout the analysis period.
-- Profitability declined despite sustained revenue growth.
-- The Living Room category generated the highest revenue but the lowest margin rate.
-- Increasing discounts contributed to the decline in overall profitability.
-- Online sales became a major growth driver while putting additional pressure on margins.
-
----
-
-# About This Project
-
-This portfolio project was developed after completing the Le Wagon Data Analytics Bootcamp.
-
-Its objective is to demonstrate practical Data Analytics skills through a complete end-to-end project, from data generation to business reporting.
-
-The focus was placed on building a realistic business scenario and communicating insights through a clear and professional Power BI dashboard.
+The dataset is synthetic and was designed to look like a typical retail situation, so the patterns above are expected as well as measured. This is a descriptive analysis: there is no forecast. 2026 stops in June, and store or customer splits should be read with care, because those links in the sales table are largely random.
